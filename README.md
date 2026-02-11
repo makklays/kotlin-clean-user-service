@@ -29,3 +29,39 @@ I want to demonstrate in this project my knowledge, such as:
 - Testcontainers
 - JUnit 5
 
+<pre>
+src/main/kotlin/com/techmatrix18/userservice
+
+├── domain
+│   ├── model
+│   │   └── User.kt
+│   ├── repository
+│   │   └── UserRepository.kt
+│   └── exception
+│       └── UserNotFoundException.kt
+│
+├── application
+│   ├── usecase
+│   │   ├── CreateUserUseCase.kt
+│   │   └── GetUserUseCase.kt
+│   └── dto
+│       ├── CreateUserRequest.kt
+│       └── UserResponse.kt
+│
+├── infrastructure
+│   ├── persistence
+│   │   ├── entity
+│   │   │   └── UserEntity.kt
+│   │   ├── repository
+│   │   │   └── JpaUserRepository.kt
+│   │   ├── config/
+│   │   │   └── JpaConfig.kt
+│   │   ├── SpringDataUserRepository.kt
+│   │   └── UserRepositoryAdapter.kt
+│   │
+│   └── web
+│       └── UserController.kt
+│
+└── UserServiceApplication.kt
+</pre>
+

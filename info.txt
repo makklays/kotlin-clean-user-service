@@ -1,0 +1,32 @@
+
+🧠 Логика Clean Architecture
+1. Domain (центр)
+✔ Entities
+✔ Value Objects
+✔ Repository interfaces
+✔ Domain exceptions
+❗ Никаких Spring, JPA, Kafka, REST тут быть не должно.
+
+2. Application Layer
+✔ Use cases
+✔ DTO
+✔ Business orchestration
+✔ Interfaces для внешних сервисов
+Здесь бизнес-логика, но без инфраструктуры.
+
+3. Infrastructure
+✔ JPA
+✔ REST Controllers
+✔ Kafka
+✔ DB
+✔ Security
+✔ External APIs
+
+Зависит от Domain и Application.
+🔥 Правильное направление зависимостей
+infrastructure → application → domain
+
+Domain не знает о Spring.
+Application не знает о JPA.
+Infrastructure знает обо всём.
+
