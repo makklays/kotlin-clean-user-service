@@ -2,6 +2,8 @@
 
 This is a project in Kotlin with Spring Boot, etc. 
 
+I implemented a microservice using Kotlin and Clean Architecture principles with Hexagonal structure.
+
 I want to demonstrate in this project my knowledge, such as:
 - REST API
 - CRUD
