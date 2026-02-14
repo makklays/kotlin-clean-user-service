@@ -16,7 +16,7 @@ I want to demonstrate in this project my knowledge, such as:
 - Docker
 - Kubernetes
 - JWT
-- Clean / Hexagonal Architecture
+- Clean / Hexagonal Architecture (DDD)
 
 #### And next tech stack:
 - Kotlin
@@ -29,9 +29,14 @@ I want to demonstrate in this project my knowledge, such as:
 - Testcontainers
 - JUnit 5
 
+## 🏗️📐 Clean Architecture
+
 <pre>
 src/main/kotlin/com/techmatrix18/userservice
 
+├── config
+│   └── ApplicationConfig.kt
+│   
 ├── domain
 │   ├── model
 │   │   └── User.kt
@@ -43,7 +48,10 @@ src/main/kotlin/com/techmatrix18/userservice
 ├── application
 │   ├── usecase
 │   │   ├── CreateUserUseCase.kt
+│   │   ├── DeleteUserUseCase.kt
 │   │   └── GetUserUseCase.kt
+│   ├── mapper 
+│   │   └── UserMapper.kt
 │   └── dto
 │       ├── CreateUserRequest.kt
 │       └── UserResponse.kt
@@ -58,9 +66,15 @@ src/main/kotlin/com/techmatrix18/userservice
 │   │   │   └── JpaConfig.kt
 │   │   ├── SpringDataUserRepository.kt
 │   │   └── UserRepositoryAdapter.kt
-│   │
+│   ├── config
+│   │   └── SecurityConfig.kt
+│   ├── messaging 
+│   │   └── UserEventPublisher.kt
 │   └── web
-│       └── UserController.kt
+│       ├── controller 
+│       │   └──UserController.kt
+│       └── exception 
+│           └──GlobalExceptionHandler.kt
 │
 └── UserServiceApplication.kt
 </pre>
